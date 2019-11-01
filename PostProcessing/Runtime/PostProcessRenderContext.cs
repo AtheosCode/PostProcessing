@@ -98,6 +98,14 @@ namespace UnityEngine.Rendering.PostProcessing
                     stereoActive = false;
                     numberOfEyes = 1;
                 }
+                #region 缩减质量 优化性能
+                screenWidth/=2;
+                screenHeight/=2;
+                m_sourceDescriptor.width/=2;
+                m_sourceDescriptor.height/=2;
+                width/=2;
+                height/=2;
+                #endregion
             }
         }
 
